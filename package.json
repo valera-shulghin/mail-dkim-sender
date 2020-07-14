@@ -1,0 +1,22 @@
+{
+  "name": "mail-dkim-sender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valera-shulghin/mail-dkim-sender.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valera-shulghin/mail-dkim-sender/issues"
+  },
+  "homepage": "https://github.com/valera-shulghin/mail-dkim-sender#readme",
+  "dependencies": {
+    "digitalocean": "^1.2.1"
+  }
+}
