@@ -10,7 +10,7 @@ async function main() {
 
     const result = content.match(/\((.+)\)/ms)[1].replace(/["\s]/g, '');
 
-    client.domains.createRecord(domain, { type: 'TXT', name: `${name}._domainkey`, data: result });
+    client.domains.createRecord(domain, { type: 'TXT', name: `${name}._domainkey`, data: `"${result}"` });
 }
 
 
