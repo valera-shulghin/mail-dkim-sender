@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/valera-shulghin/mail-dkim-sender#readme",
   "dependencies": {
-    "digitalocean": "^1.2.1"
+    "digitalocean": "^1.2.1",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-router": "^9.1.0",
+    "nodemailer": "^6.4.10"
   }
 }
