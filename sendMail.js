@@ -10,7 +10,7 @@ router.post('/send', async (ctx) => {
     const { to, subject, htmlContent, textContent } = ctx.request.body;
 
     const transporter = nodemailer.createTransport({
-        host: `${config.name}.b2bhint.email`,
+        host: `${config.name}.${config.domain}`,
         port: 587,
         secure: false,
         auth: {
