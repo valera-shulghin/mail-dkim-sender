@@ -7,7 +7,7 @@ function randomInteger(min, max) {
 }
 
 router.post('/send', async (ctx) => {
-    const { to, subject, htmlContent, textContent } = ctx.request.body;
+    const { to, subject, htmlContent, textContent, unsubscribeUrl } = ctx.request.body;
 
     const transporter = nodemailer.createTransport({
         host: `${config.name}.${config.domain}`,
@@ -26,6 +26,12 @@ router.post('/send', async (ctx) => {
         subject: subject, // Subject line
         text: textContent,
         html: htmlContent,
+        list: {
+            unsubscribe: {
+                url: unsubscribeUrl,
+                comment: 'Unsubscribe'
+            },
+        }
     });
 
     ctx.body = response;
